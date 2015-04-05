@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <h1>Twig {{ app.request.getLocale() }}</h1>
+    <h2>{{ array.fruit }}</h2>
+
+    <p>
+        {{ content|default|replace({'and': 'ORRR'})|raw }}
+    </p>
+{% endblock %}
